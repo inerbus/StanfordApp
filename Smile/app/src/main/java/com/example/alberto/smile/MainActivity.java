@@ -1,5 +1,8 @@
 package com.example.alberto.smile;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +14,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setHomeAsUpIndicator(R.drawable.abc_ic_menu_moreoverflow_mtrl_alpha);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+
+        //actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FF8B1515")));
+
     }
 
     @Override
